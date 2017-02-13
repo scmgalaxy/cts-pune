@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 mfdsbfmsdbmfsbmfbsmfdsnbfmsdnbfmsdnb
 deepali
 =======
 mfdsbfmsdbmfsbmfbsm
 >>>>>>> parent of bacd952... junk222
+=======
+mfdsbfmsdbmfsbmfbsmfdsnbfmsdnbfmsdnb
+>>>>>>> parent of 53bddcc... without adding
