@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 mfdsbfmsdbmfsbmfbsmfdsnbfmsdnbfmsdnb
 deepali
 =======
@@ -8,3 +9,7 @@ mfdsbfmsdbmfsbmfbsm
 =======
 mfdsbfmsdbmfsbmfbsmfdsnbfmsdnbfmsdnb
 >>>>>>> parent of 53bddcc... without adding
+=======
+mfdsbfmsdbmfsbmfbsmfdsnbfmsdnbfmsdnb
+deepali
+>>>>>>> parent of 9746561... Revert "junk222"
