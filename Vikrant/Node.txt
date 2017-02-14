@@ -1,53 +1,69 @@
-class BinaryTree 
+class Node
 {
-    private Node root;
-    private int count;
+    private int number;
+    public Node rightLeaf;
+    public Node leftLeaf;
 
-    public BinaryTree()
+    public Node(int value)
     {
-        root = null;
-        count = 0;
-    }
-    public bool isEmpty()
-    {
-        return root == null;
+        number = value;
+        rightLeaf = null;
+        leftLeaf = null;
     }
 
-    public void insert(int d)
+    public bool isLeaf(ref Node node)
     {
-        if (isEmpty())
+        return (node.rightLeaf == null && node.leftLeaf == null);
+
+    }
+
+    public void insertData(ref Node node, int data)
+    {
+        if (node == null)
         {
-            root = new Node(d);
+            node = new Node(data);
+
         }
-        else
+        else if (node.number < data)
         {
-            root.insertData(ref root, d);
+            insertData(ref node.rightLeaf, data);
         }
 
-        count++;
+        else if (node.number > data)
+        {
+            insertData(ref node.leftLeaf, data);
+        }
     }
 
-    public bool search(int s)
+    public bool search(Node node, int s)
     {
-        return root.search(root, s);
+        if (node == null)
+            return false;
+
+        if (node.number == s)
+        {
+            return true;
+        }
+        else if (node.number < s)
+        {
+           return search(node.rightLeaf, s);
+        }
+        else if (node.number > s)
+        {
+            return search(node.leftLeaf, s);
+        }
+
+        return false;
     }
 
-    public bool isLeaf()
+    public void display(Node n)
     {
-        if(!isEmpty())
-        return root.isLeaf(ref root);
+        if (n == null)
+            return;
 
-        return true;
+        display(n.leftLeaf);
+        Console.Write(" " + n.number);
+        display(n.rightLeaf);
     }
 
-    public void display()
-    {
-        if(!isEmpty())
-        root.display(root);
-    }
-
-    public int Count()
-    {
-        return count;
-    }
 }
